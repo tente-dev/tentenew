@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tente</string>
+    <string name="facebook_app_id">6037664196280652</string>
+    <string name="facebook_client_token">6c40c3bb53fb5dfa98e9096b2404b623</string>
+    <string name="tente">Tente</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAq_tcJVyOWWDl9yNZBD1wwHGxntfyACXk</string>
+</resources>
