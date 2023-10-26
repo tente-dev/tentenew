@@ -103,8 +103,8 @@ const BranchItem = ({ branch, index }: BranchProps) => {
               alignSelf="center"
               borderRadius={'xl'}>
               {branch.homeDelivery
-                ? 'Envio a domicilio'
-                : 'Sin envio a domicilio'}
+                ? 'Envío a domicilio'
+                : 'Sin envío a domicilio'}
             </Badge>
           </HStack>
           <HStack flexWrap={'wrap'} space={1}>

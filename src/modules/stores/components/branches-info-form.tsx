@@ -181,6 +181,47 @@ export const BranchesInfoForm = (props: Props) => {
           </Text>
         </Stack>
       </Pressable>
+      <Pressable
+        flexDirection={'row'}
+        alignItems={'center'}
+        mb={locationSelected ? 3 : 12}
+        onPress={() =>
+          navigateToSelectLocation({
+            type: 'branch',
+            title: 'Ubicación de sucursal',
+            initialCoordinates: locationSelected
+              ? { latitude: payload.lat, longitude: payload.long }
+              : undefined,
+          })
+        }>
+        <View
+          bgColor={locationSelected ? 'success.500' : COLORS.primary[500]}
+          width={44}
+          height={44}
+          borderRadius={6}
+          justifyContent={'center'}
+          alignItems={'center'}>
+          <Icon
+            size={7}
+            color={theme.colors.background}
+            name={locationSelected ? 'my-location' : 'location-on'}
+            as={MaterialIcons}
+          />
+        </View>
+        <Stack pl={4}>
+          <Text fontWeight={'600'}>
+            {locationSelected
+              ? 'Ubicación selecionada'
+              : 'Selecciona la ubicación de tu sucursal'}
+          </Text>
+          <Text color={TEXT_COLORS.secondary} fontSize={11} opacity={0.7}>
+            {locationSelected
+              ? 'Actualizar ubicación'
+              : 'Deja en blanco si no presenta local físico'}
+          </Text>
+        </Stack>
+        
+      </Pressable>
       {locationSelected && (
         <Button
           _pressed={{ bgColor: 'transparent' }}
@@ -227,7 +268,7 @@ export const BranchesInfoForm = (props: Props) => {
         }>
         {payload.productsCatalogue
           ? 'Catalogo selecionado'
-          : 'Subir catalogo de productos'}
+          : 'Subir catálogo de productos'}
       </Button>
       <Text fontSize={'xs'} mt={1} textAlign={'center'}>
         {'El catalogo debe estar en formato .pdf'}

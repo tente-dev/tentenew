@@ -30,7 +30,7 @@ export const StoreStatus = () => {
             {'Registra tu tienda'}
           </Button>
           <Text mt={4} textAlign={'center'} fontSize={'xs'} opacity={0.5}>
-            {'Registra tu tienda y vende tus productos a travez de tente'}
+            {'Registra tu tienda y aumenta tu alcance a través de Tente'}
           </Text>
         </Fragment>
       )}

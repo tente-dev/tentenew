@@ -40,7 +40,7 @@ export const Login = () => {
               <HStack justifyContent="center">
                 <Text fontSize={15}>{`¿No tienes cuenta? `}</Text>
                 <Text fontSize={15} fontWeight={'700'} color={'primary.500'}>
-                  {'Registrate'}
+                  {'Regístrate'}
                 </Text>
               </HStack>
             </Pressable>

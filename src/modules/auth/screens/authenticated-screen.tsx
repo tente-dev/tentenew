@@ -2,10 +2,9 @@ import React, { Fragment, PropsWithChildren } from 'react'
 import { useIsAuthenticated } from '../hooks/user-info'
 import { Button, Text, VStack } from 'native-base'
 import { useNavigationActions } from 'shared/navigation'
-import { Dimensions, StatusBar } from 'react-native'
+import { Dimensions, StatusBar, Image } from 'react-native'  // <-- Import Image here
 import { useTheme } from '@react-navigation/native'
-import Lottie from 'lottie-react-native'
-import { LOTTIE_ANIMATIONS } from 'shared/animations/constants/lottie'
+
 
 interface Props {
   description?: string
@@ -39,14 +38,13 @@ export const AuthenticatedScreen = ({
             pt={6}>
             {description ?? 'Inicia sesión'}
           </Text>
-          <Lottie
-            style={{
-              height: width * 0.6,
-            }}
-            source={LOTTIE_ANIMATIONS.authenticate}
-            autoPlay
-            loop
+      
+          <Image 
+            source={require('../../../../assets/images/cuenta.png')}  
+            style={{ width: width * 0.6, height: width * 0.6 }} 
+            resizeMode="contain"
           />
+       
           <Button mt={7} onPress={navigateToLogin} width={'full'}>
             {'Iniciar sesión'}
           </Button>
